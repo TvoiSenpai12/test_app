@@ -12,7 +12,8 @@ defmodule TestApp.Fiba do
 
   def fib(list, n) do
     # IO.puts(n)
-    a = fib([hd(list) + hd(tl(list))] ++ list, n - 1)
+    fib([hd(list) + hd(tl(list))] ++ list, n - 1)
+    # for i <- a, do: if i > n, do: Process.exit(self, :normal)
     # IO.inspect a, label: "List"
     # if [hd(list) + hd(tl(list))] > n, do: fib([hd(list) + hd(tl(list))] ++ list, n - 1), else: list ++ [n]
   end
