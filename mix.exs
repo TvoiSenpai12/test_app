@@ -21,7 +21,7 @@ defmodule TestApp.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:csvlixir, "~> 2.0.3"}
+      {:csvlixir, "~> 2.0.3"}
     ]
   end
 end
