@@ -1,13 +1,12 @@
 defmodule TestApp.Group do
   def group(mass) do
     arr = %{string: [], integer: [], float: []}
-    
-    Enum.reduce(mass, fn(n, acc) ->
-      IO.inspect(acc) 
+
+    Enum.reduce(mass, arr, fn(n, acc) ->
       case n do
-        n when is_binary(n) -> Map.put(arr, :string, [acc | n])
-        n when is_integer(n) -> Map.put(arr, :integer, [acc | n])
-        n when is_float(n) -> Map.put(arr, :float, [acc | n])
+        n when is_binary(n) -> Map.put(acc, :string, [n | acc.string])
+        n when is_integer(n) -> Map.put(acc, :integer, [n | acc.integer])
+        n when is_float(n) -> Map.put(acc, :float, [n | acc.float])
       end
     end)
     |> IO.inspect
