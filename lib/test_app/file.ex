@@ -5,7 +5,7 @@ defmodule TestApp.File do
         base_list = List.delete(Enum.to_list(base), ["Name", "Surname", "Age"])
 
         Enum.reduce(base_list, base_list, fn(x, acc) ->
-            acc
+            Enum.group_by(acc)
         end)
     end
 end
