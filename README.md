@@ -14,8 +14,17 @@ def deps do
   ]
 end
 ```
+### Implemented 3 functions that were given for testing
 
- from the user and distributes it by type string, integer, float into an associative array
+**Fiba** - calculates the Fibonacci number to the value specified by the user
+_Example of a call_
+**TestApp.Fiba.find(9)**
+
+**File** - takes a file with a css table where users and their age are indicated, and calculates the oldest and youngest user.Example of a call
+_Example of a call_
+**TestApp.File.file**
+
+**Group** - the function receives an array from the user and distributes it by type string, integer, float into an associative array
 _Example of a call_
 **TestApp.Group.group([1,2,"foo", 2.5, "bar", 6.3])**
 
