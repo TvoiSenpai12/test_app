@@ -11,7 +11,7 @@ defmodule TestApp.Fiba do
   defp do_minus(list, n) do
     a = do_fib([hd(list) + hd(tl(list))] ++ list, n - 1)
     temp = Enum.map(a, fn(x) ->  if x > n do x end end)
-    minus = Enum.reject(temp, &is_nil/1)
+    Enum.reject(temp, &is_nil/1)
   end
   
     defp do_fib(list, n) do
