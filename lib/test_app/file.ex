@@ -1,14 +1,14 @@
 defmodule TestApp.File do
     def file do
-        # Path.expand('/Users/alexandersobolev/Downloads/example.csv') 
-        # |> Path.absname 
-        # |> File.read
-        # |> Enum.to_list
+        route = "./example.csv"
+        base = CSVLixir.read(route)
+        base_list = List.delete(Enum.to_list(base), ["Name", "Surname", "Age"])
 
-        CSVLixir.read("/Users/alexandersobolev/Downloads/example.csv") 
-        |> Enum.to_list
-        
+        Enum.reduce(base_list, base_list, fn(x, acc) ->
+            acc
+        end)
     end
 end
 
+# route = "./example.csv"
 # TestApp.File.file
