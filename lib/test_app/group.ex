@@ -12,4 +12,5 @@ defmodule TestApp.Group do
     |> IO.inspect
   end
 end
+
 # TestApp.Group.group([1,2,"foo", 2.5, "bar", 6.3])
